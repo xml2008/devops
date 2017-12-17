@@ -1,5 +1,10 @@
 pipeline {
-  agent {label 'aliyun'}
+  agent {
+    node {
+      label 'aliyun'
+    }
+    
+  }
   stages {
     stage('Build') {
       parallel {
@@ -8,7 +13,7 @@ pipeline {
             sh 'date'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             build 'SampleBuildJob'
           }
@@ -22,7 +27,7 @@ pipeline {
             sh 'date'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             build 'TestDeployment'
           }
