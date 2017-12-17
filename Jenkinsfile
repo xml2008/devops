@@ -7,20 +7,8 @@ pipeline {
   }
   stages {
     stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            sh 'date'
-          }
-        }
-        stage('error') {
-          steps {
-            node(label: 'aliyun') {
-              build 'SampleBuildJob'
-            }
-            
-          }
-        }
+      steps {
+        sh 'date'
       }
     }
     stage('Deploy') {
