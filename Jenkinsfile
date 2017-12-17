@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent {label 'aliyun'}
   stages {
     stage('Build') {
       parallel {
