@@ -15,9 +15,10 @@ pipeline {
         }
         stage('error') {
           steps {
-            node('aliyun') {
+            node(label: 'aliyun') {
               build 'SampleBuildJob'
             }
+            
           }
         }
       }
@@ -31,9 +32,10 @@ pipeline {
         }
         stage('error') {
           steps {
-            node('aliyun') {
+            node(label: 'aliyun') {
               build 'TestDeployment'
             }
+            
           }
         }
       }
