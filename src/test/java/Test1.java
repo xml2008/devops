@@ -6,6 +6,6 @@ public class Test1 {
 	
    public void testAdd() {
       String str = "Junit is working fine";
-      assertEquals("Junit is working fine",str);
+      assertEquals("Junit is working fine X",str);
    }
 }
