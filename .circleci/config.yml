@@ -56,3 +56,12 @@ jobs:
 
       - store_artifacts:
           path: /tmp/artifacts
+  test:
+    steps:
+      - run: echo "hello world" 
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
